@@ -33,8 +33,9 @@ class MockeryDemoTest extends \TestCase
                      ->andReturn(TRUE);
 
         // Act
-        $smsService = new SmsService($repo, $phoneService);
-        $boolean = $smsService->execute(new SmsRequest(42, "Hello World!"));
+        $boolean = (new SmsService($repo, $phoneService))->execute(
+            new SmsRequest(42, "Hello World!")
+        );
 
         // Assert
         $this->assertTrue($boolean);
