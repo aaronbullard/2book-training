@@ -1,0 +1,28 @@
+{
+    "name": "aaron/training",
+    "description": "2Book training examples",
+    "authors": [
+        {
+            "name": "Aaron Bullard",
+            "email": "aaron@2book.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Training\\": "src"
+        },
+        "classmap": [
+            "tests"
+        ]
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --colors=always --coverage-html=./coverage --coverage-text=tests/summary.txt"
+    }
+}
